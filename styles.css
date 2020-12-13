@@ -20,3 +20,6 @@ main {
 .fa-search {
   font-size: 24pt;
 }
+::placeholder {
+  font-size: 18pt;
+}
