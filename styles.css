@@ -7,4 +7,10 @@ body {
   background-color: thistle;
 }
 
+main {
+  height: 98vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 }
