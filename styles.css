@@ -16,7 +16,14 @@ main {
   justify-content: center;
   align-items: center;
 }
-
+#hidden-search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#search-text input {
+  transition: all 3s ease-out
+}
 .fa-search {
   font-size: 24pt;
 }
