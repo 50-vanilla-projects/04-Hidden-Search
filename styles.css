@@ -61,3 +61,7 @@ main {
   font-size: 24pt;
   padding: 10px;
 }
+.active {
+  min-height: 40px;
+  min-width: 500px;
+}
