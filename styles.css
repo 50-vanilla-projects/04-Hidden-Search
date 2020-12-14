@@ -53,7 +53,9 @@ main {
   align-items: center;
 }
 #search-text input {
-  transition: all 3s ease-out
+  height: 1px;
+  width: 1px;
+  transition: 3s ease-out
 }
 .fa-search {
   font-size: 24pt;
