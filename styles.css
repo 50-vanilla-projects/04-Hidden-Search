@@ -61,6 +61,9 @@ main {
   font-size: 24pt;
   padding: 10px;
   background-color: thistle;
+  position: relative;
+  top: -5px;
+  left: -5px;
 }
 .active {
   min-height: 40px;
