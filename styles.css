@@ -1,3 +1,36 @@
+/* I learned a lot about styling form elements from this project.
+  Search input fields are not easily styled, but text fields can be
+  styled with css, so I am using a text input instead of a search
+  input.  Another issue for me was learning how to hide the text
+  input and take it out of the document flow so that the search icon 
+  would be centered when the text input is hidden, as well as showing
+  a transition for the change. */
+
+  /* I learned about styling form elements and working with hidden
+   elements during this project.
+     Problem 1: Styling a search input field with css didn't work.  I 
+   couldn't change the height, width, or padding to make it the size
+   I wanted.
+     Solution 1: Text input fields can be styled with css.  I changed
+   my search input to a text input, then was able to handle the styling
+   I was interested in with css.
+     Problem 2: Using visibility: hidden was problematic for two reasons.
+   First, hidden elements still use up the space they would use as if they
+   are not hidden. I wanted the search icon to move to the middle of the 
+   window when the text input was hidden.  The option, display: none, cannot
+   use transitions.  I read many articles about hiding elements in various
+   ways that affect: 
+     a) whether or not the element's invisible space is still shown
+     b) whether or not screen readers will read the content
+     c) whether or not events can be triggered
+     d) whether or not it can be animated with transitions
+     e) performance
+   In the end, I watched the solution used in the course video and will use the
+   same approach, by using other css properties such as size to hide the element
+   under the search icon.  */
+
+
+
 * {
   margin: 0;
   padding: 0;
