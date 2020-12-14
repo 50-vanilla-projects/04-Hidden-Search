@@ -60,6 +60,7 @@ main {
 .fa-search {
   font-size: 24pt;
   padding: 10px;
+  background-color: thistle;
 }
 .active {
   min-height: 40px;
