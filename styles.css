@@ -5,11 +5,9 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 18pt;
 }
-
 body {
   background-color: thistle;
 }
-
 main {
   height: 98vh;
   display: flex;
@@ -26,9 +24,8 @@ main {
 }
 .fa-search {
   font-size: 24pt;
+  padding: 10px;
 }
-
-::placeholder {
-  font-size: 18pt;
-  color: #666468;
+.hidden {
+  visibility: hidden;
 }
