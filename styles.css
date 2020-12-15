@@ -27,7 +27,12 @@
      e) performance
    In the end, I watched the solution used in the course video and will use the
    same approach, by using other css properties such as size to hide the element
-   under the search icon.  */
+   under the search icon.  
+   P.S. I used flexbox to position items, but transitions didn't work on flexbox
+   items.  I read that because a change in one item makes other items change as
+   well, and it would take too many resources to keep re-drawing each item as
+   they change. I had to take the items out of flexbox and moved the icon and
+   input separately. */
 
 
 
@@ -47,25 +52,29 @@ main {
   justify-content: center;
   align-items: center;
 }
-#hidden-search {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.search {
+  position: relative;
 }
-#search-text input {
+.search .input {
   height: 1px;
   width: 1px;
-  transition: 3s ease-out
+  border: 0;
+  transition: all .3s ease-out;
 }
-.fa-search {
+.search .icon {
   font-size: 24pt;
-  padding: 10px;
+  padding: 15px;
   background-color: thistle;
-  position: relative;
-  top: -5px;
-  left: -5px;
+  cursor: pointer;
+  position: absolute;
+  top: -15px;
+  left: 0px;
+  transition: transform .3s ease-out;
 }
-.active {
-  min-height: 40px;
-  min-width: 500px;
+.search.active .input {
+  height: 30px;
+  width: 400px;
+}
+.search.active .icon {
+  transform: translateX(410px);
 }
