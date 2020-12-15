@@ -1,6 +1,7 @@
-const icon = document.querySelector('.fa-search');
-const searchField = document.querySelector('#text-box');
+const icon = document.querySelector('.icon');
+const search = document.querySelector('.search');
+
 
 icon.addEventListener('click', () => {
-  searchField.classList.remove('hidden');
+  search.classList.toggle('active');
 });
