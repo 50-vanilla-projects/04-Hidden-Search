@@ -1,6 +1,80 @@
+/* I learned a lot about styling form elements from this project.
+  Search input fields are not easily styled, but text fields can be
+  styled with css, so I am using a text input instead of a search
+  input.  Another issue for me was learning how to hide the text
+  input and take it out of the document flow so that the search icon 
+  would be centered when the text input is hidden, as well as showing
+  a transition for the change. */
+
+  /* I learned about styling form elements and working with hidden
+   elements during this project.
+     Problem 1: Styling a search input field with css didn't work.  I 
+   couldn't change the height, width, or padding to make it the size
+   I wanted.
+     Solution 1: Text input fields can be styled with css.  I changed
+   my search input to a text input, then was able to handle the styling
+   I was interested in with css.
+     Problem 2: Using visibility: hidden was problematic for two reasons.
+   First, hidden elements still use up the space they would use as if they
+   are not hidden. I wanted the search icon to move to the middle of the 
+   window when the text input was hidden.  The option, display: none, cannot
+   use transitions.  I read many articles about hiding elements in various
+   ways that affect: 
+     a) whether or not the element's invisible space is still shown
+     b) whether or not screen readers will read the content
+     c) whether or not events can be triggered
+     d) whether or not it can be animated with transitions
+     e) performance
+   In the end, I watched the solution used in the course video and will use the
+   same approach, by using other css properties such as size to hide the element
+   under the search icon.  
+   P.S. I used flexbox to position items, but transitions didn't work on flexbox
+   items.  I read that because a change in one item makes other items change as
+   well, and it would take too many resources to keep re-drawing each item as
+   they change. I had to take the items out of flexbox and moved the icon and
+   input separately. */
+
+
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 18pt;
+}
+body {
+  background-color: thistle;
+}
+main {
+  height: 98vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.search {
+  position: relative;
+}
+.search .input {
+  height: 1px;
+  width: 1px;
+  border: 0;
+  transition: all .3s ease-out;
+}
+.search .icon {
+  font-size: 24pt;
+  padding: 15px;
+  background-color: thistle;
+  cursor: pointer;
+  position: absolute;
+  top: -15px;
+  left: 0px;
+  transition: transform .3s ease-out;
+}
+.search.active .input {
+  height: 30px;
+  width: 400px;
+}
+.search.active .icon {
+  transform: translateX(410px);
 }
